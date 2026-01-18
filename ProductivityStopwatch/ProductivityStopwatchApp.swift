@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct ProductivityStopwatchApp: App {
+    @StateObject private var store = AppStore()
+    @State private var authorized = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authorized {
+                ContentView()
+                    .environmentObject(store)
+                    .onAppear {
+                        MonitoringManager.shared.loadSavedUsage()
+                        store.reload()
+                    }
+            } else {
+                AuthorizationView(authorized: $authorized)
+            }
         }
     }
 }
+

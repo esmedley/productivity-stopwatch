@@ -14,6 +14,22 @@
 		571C1A2D2F0F44ED002D7753 /* ProductivityStopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C1A2C2F0F44ED002D7753 /* ProductivityStopwatchTests.swift */; };
 		571C1A372F0F44ED002D7753 /* ProductivityStopwatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C1A362F0F44ED002D7753 /* ProductivityStopwatchUITests.swift */; };
 		571C1A392F0F44ED002D7753 /* ProductivityStopwatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C1A382F0F44ED002D7753 /* ProductivityStopwatchUITestsLaunchTests.swift */; };
+		57D34ED62F1C398300FE92D8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED52F1C398300FE92D8 /* AppGroup.swift */; };
+		57D34EDC2F1C3B0F00FE92D8 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DC71122F133E3E00A9CE3B /* DeviceActivity.framework */; };
+		57D34EDF2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EDE2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift */; };
+		57D34EE42F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 57D34EDB2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		57D34EFB2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFA2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift */; };
+		57D34EFD2F1C42C800FE92D8 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFC2F1C42C800FE92D8 /* TotalActivityReport.swift */; };
+		57D34EFF2F1C42C800FE92D8 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFE2F1C42C800FE92D8 /* TotalActivityView.swift */; };
+		57D34F042F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		57D34F0B2F1C446600FE92D8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED52F1C398300FE92D8 /* AppGroup.swift */; };
+		57D34F0C2F1C446800FE92D8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED52F1C398300FE92D8 /* AppGroup.swift */; };
+		57D34F0F2F1C4F1000FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
+		57D34F102F1C4F1600FE92D8 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC71282F13475D00A9CE3B /* AppStore.swift */; };
+		57D34F122F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */; };
+		57D34F132F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
+		57D34F142F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
+		57DC71272F13418A00A9CE3B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC71262F13418A00A9CE3B /* AuthorizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +47,46 @@
 			remoteGlobalIDString = 571C1A172F0F44EB002D7753;
 			remoteInfo = ProductivityStopwatch;
 		};
+		57D34EE22F1C3B0F00FE92D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571C1A102F0F44EB002D7753 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57D34EDA2F1C3B0F00FE92D8;
+			remoteInfo = ProductivityStopwatchDeviceActivityMonitor;
+		};
+		57D34F022F1C42C800FE92D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571C1A102F0F44EB002D7753 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57D34EF72F1C42C800FE92D8;
+			remoteInfo = ProductivityStopwatchDeviceActivityReport;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57D34F082F1C42C800FE92D8 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				57D34F042F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DC711F2F133E3E00A9CE3B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				57D34EE42F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		571C1A182F0F44EB002D7753 /* ProductivityStopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductivityStopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +99,23 @@
 		571C1A322F0F44ED002D7753 /* ProductivityStopwatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductivityStopwatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571C1A362F0F44ED002D7753 /* ProductivityStopwatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchUITests.swift; sourceTree = "<group>"; };
 		571C1A382F0F44ED002D7753 /* ProductivityStopwatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringManager.swift; sourceTree = "<group>"; };
+		57D34ED52F1C398300FE92D8 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		57D34EDB2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProductivityStopwatchDeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D34EDE2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		57D34EE02F1C3B0F00FE92D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D34EE12F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductivityStopwatchDeviceActivityMonitor.entitlements; sourceTree = "<group>"; };
+		57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = ProductivityStopwatchDeviceActivityReport.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D34EFA2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchDeviceActivityReport.swift; sourceTree = "<group>"; };
+		57D34EFC2F1C42C800FE92D8 /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
+		57D34EFE2F1C42C800FE92D8 /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
+		57D34F002F1C42C800FE92D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D34F012F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductivityStopwatchDeviceActivityReport.entitlements; sourceTree = "<group>"; };
+		57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchDeviceActivityMonitor.swift; sourceTree = "<group>"; };
+		57DC710B2F133D5B00A9CE3B /* ProductivityStopwatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductivityStopwatch.entitlements; sourceTree = "<group>"; };
+		57DC71122F133E3E00A9CE3B /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		57DC71262F13418A00A9CE3B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		57DC71282F13475D00A9CE3B /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +140,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57D34ED82F1C3B0F00FE92D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D34EDC2F1C3B0F00FE92D8 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57D34EF52F1C42C800FE92D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +164,9 @@
 				571C1A1A2F0F44EB002D7753 /* ProductivityStopwatch */,
 				571C1A2B2F0F44ED002D7753 /* ProductivityStopwatchTests */,
 				571C1A352F0F44ED002D7753 /* ProductivityStopwatchUITests */,
+				57D34EDD2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */,
+				57D34EF92F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */,
+				57DC71112F133E3E00A9CE3B /* Frameworks */,
 				571C1A192F0F44EB002D7753 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +177,8 @@
 				571C1A182F0F44EB002D7753 /* ProductivityStopwatch.app */,
 				571C1A282F0F44ED002D7753 /* ProductivityStopwatchTests.xctest */,
 				571C1A322F0F44ED002D7753 /* ProductivityStopwatchUITests.xctest */,
+				57D34EDB2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex */,
+				57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,10 +186,15 @@
 		571C1A1A2F0F44EB002D7753 /* ProductivityStopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				57DC710B2F133D5B00A9CE3B /* ProductivityStopwatch.entitlements */,
 				571C1A1B2F0F44EB002D7753 /* ProductivityStopwatchApp.swift */,
 				571C1A1D2F0F44EB002D7753 /* ContentView.swift */,
 				571C1A1F2F0F44ED002D7753 /* Assets.xcassets */,
 				571C1A212F0F44ED002D7753 /* Preview Content */,
+				57DC71262F13418A00A9CE3B /* AuthorizationView.swift */,
+				57DC71282F13475D00A9CE3B /* AppStore.swift */,
+				57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */,
+				57D34ED52F1C398300FE92D8 /* AppGroup.swift */,
 			);
 			path = ProductivityStopwatch;
 			sourceTree = "<group>";
@@ -127,6 +224,37 @@
 			path = ProductivityStopwatchUITests;
 			sourceTree = "<group>";
 		};
+		57D34EDD2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				57D34EDE2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift */,
+				57D34EE02F1C3B0F00FE92D8 /* Info.plist */,
+				57D34EE12F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.entitlements */,
+				57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */,
+			);
+			path = ProductivityStopwatchDeviceActivityMonitor;
+			sourceTree = "<group>";
+		};
+		57D34EF92F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */ = {
+			isa = PBXGroup;
+			children = (
+				57D34EFA2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift */,
+				57D34EFC2F1C42C800FE92D8 /* TotalActivityReport.swift */,
+				57D34EFE2F1C42C800FE92D8 /* TotalActivityView.swift */,
+				57D34F002F1C42C800FE92D8 /* Info.plist */,
+				57D34F012F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.entitlements */,
+			);
+			path = ProductivityStopwatchDeviceActivityReport;
+			sourceTree = "<group>";
+		};
+		57DC71112F133E3E00A9CE3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57DC71122F133E3E00A9CE3B /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +265,14 @@
 				571C1A142F0F44EB002D7753 /* Sources */,
 				571C1A152F0F44EB002D7753 /* Frameworks */,
 				571C1A162F0F44EB002D7753 /* Resources */,
+				57DC711F2F133E3E00A9CE3B /* Embed Foundation Extensions */,
+				57D34F082F1C42C800FE92D8 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				57D34EE32F1C3B0F00FE92D8 /* PBXTargetDependency */,
+				57D34F032F1C42C800FE92D8 /* PBXTargetDependency */,
 			);
 			name = ProductivityStopwatch;
 			productName = ProductivityStopwatch;
@@ -183,6 +315,40 @@
 			productReference = 571C1A322F0F44ED002D7753 /* ProductivityStopwatchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		57D34EDA2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57D34EE52F1C3B0F00FE92D8 /* Build configuration list for PBXNativeTarget "ProductivityStopwatchDeviceActivityMonitor" */;
+			buildPhases = (
+				57D34ED72F1C3B0F00FE92D8 /* Sources */,
+				57D34ED82F1C3B0F00FE92D8 /* Frameworks */,
+				57D34ED92F1C3B0F00FE92D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProductivityStopwatchDeviceActivityMonitor;
+			productName = ProductivityStopwatchDeviceActivityMonitor;
+			productReference = 57D34EDB2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		57D34EF72F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57D34F052F1C42C800FE92D8 /* Build configuration list for PBXNativeTarget "ProductivityStopwatchDeviceActivityReport" */;
+			buildPhases = (
+				57D34EF42F1C42C800FE92D8 /* Sources */,
+				57D34EF52F1C42C800FE92D8 /* Frameworks */,
+				57D34EF62F1C42C800FE92D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProductivityStopwatchDeviceActivityReport;
+			productName = ProductivityStopwatchDeviceActivityReport;
+			productReference = 57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +370,12 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 571C1A172F0F44EB002D7753;
 					};
+					57D34EDA2F1C3B0F00FE92D8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					57D34EF72F1C42C800FE92D8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 571C1A132F0F44EB002D7753 /* Build configuration list for PBXProject "ProductivityStopwatch" */;
@@ -222,6 +394,8 @@
 				571C1A172F0F44EB002D7753 /* ProductivityStopwatch */,
 				571C1A272F0F44ED002D7753 /* ProductivityStopwatchTests */,
 				571C1A312F0F44ED002D7753 /* ProductivityStopwatchUITests */,
+				57D34EDA2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */,
+				57D34EF72F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +424,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57D34ED92F1C3B0F00FE92D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57D34EF62F1C42C800FE92D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,7 +446,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				571C1A1E2F0F44EB002D7753 /* ContentView.swift in Sources */,
+				57D34F0F2F1C4F1000FE92D8 /* MonitoringManager.swift in Sources */,
+				57D34ED62F1C398300FE92D8 /* AppGroup.swift in Sources */,
+				57D34F102F1C4F1600FE92D8 /* AppStore.swift in Sources */,
 				571C1A1C2F0F44EB002D7753 /* ProductivityStopwatchApp.swift in Sources */,
+				57DC71272F13418A00A9CE3B /* AuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +471,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57D34ED72F1C3B0F00FE92D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D34EDF2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift in Sources */,
+				57D34F0B2F1C446600FE92D8 /* AppGroup.swift in Sources */,
+				57D34F122F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift in Sources */,
+				57D34F132F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57D34EF42F1C42C800FE92D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D34F0C2F1C446800FE92D8 /* AppGroup.swift in Sources */,
+				57D34EFF2F1C42C800FE92D8 /* TotalActivityView.swift in Sources */,
+				57D34F142F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */,
+				57D34EFB2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift in Sources */,
+				57D34EFD2F1C42C800FE92D8 /* TotalActivityReport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +506,16 @@
 			isa = PBXTargetDependency;
 			target = 571C1A172F0F44EB002D7753 /* ProductivityStopwatch */;
 			targetProxy = 571C1A332F0F44ED002D7753 /* PBXContainerItemProxy */;
+		};
+		57D34EE32F1C3B0F00FE92D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57D34EDA2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */;
+			targetProxy = 57D34EE22F1C3B0F00FE92D8 /* PBXContainerItemProxy */;
+		};
+		57D34F032F1C42C800FE92D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57D34EF72F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */;
+			targetProxy = 57D34F022F1C42C800FE92D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,8 +642,10 @@
 		571C1A3D2F0F44ED002D7753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatch/ProductivityStopwatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProductivityStopwatch/Preview Content\"";
@@ -445,8 +672,10 @@
 		571C1A3E2F0F44ED002D7753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatch/ProductivityStopwatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProductivityStopwatch/Preview Content\"";
@@ -542,6 +771,108 @@
 			};
 			name = Release;
 		};
+		57D34EE62F1C3B0F00FE92D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatchDeviceActivityMonitor/ProductivityStopwatchDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductivityStopwatchDeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProductivityStopwatchDeviceActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmedley.ProductivityStopwatch.ProductivityStopwatchDeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57D34EE72F1C3B0F00FE92D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatchDeviceActivityMonitor/ProductivityStopwatchDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductivityStopwatchDeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProductivityStopwatchDeviceActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmedley.ProductivityStopwatch.ProductivityStopwatchDeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57D34F062F1C42C800FE92D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatchDeviceActivityReport/ProductivityStopwatchDeviceActivityReport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SBT2247J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductivityStopwatchDeviceActivityReport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProductivityStopwatchDeviceActivityReport;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmedley.ProductivityStopwatch.ProductivityStopwatchDeviceActivityReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57D34F072F1C42C800FE92D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProductivityStopwatchDeviceActivityReport/ProductivityStopwatchDeviceActivityReport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SBT2247J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductivityStopwatchDeviceActivityReport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProductivityStopwatchDeviceActivityReport;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmedley.ProductivityStopwatch.ProductivityStopwatchDeviceActivityReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +908,24 @@
 			buildConfigurations = (
 				571C1A432F0F44ED002D7753 /* Debug */,
 				571C1A442F0F44ED002D7753 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57D34EE52F1C3B0F00FE92D8 /* Build configuration list for PBXNativeTarget "ProductivityStopwatchDeviceActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57D34EE62F1C3B0F00FE92D8 /* Debug */,
+				57D34EE72F1C3B0F00FE92D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57D34F052F1C42C800FE92D8 /* Build configuration list for PBXNativeTarget "ProductivityStopwatchDeviceActivityReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57D34F062F1C42C800FE92D8 /* Debug */,
+				57D34F072F1C42C800FE92D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
