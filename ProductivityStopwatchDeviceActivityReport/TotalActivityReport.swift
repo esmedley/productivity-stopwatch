@@ -20,19 +20,34 @@ struct TotalActivityReport: DeviceActivityReportScene {
     let context: DeviceActivityReport.Context = .totalActivity
     
     // Define the custom configuration and the resulting view for this report.
-    let content: (String) -> TotalActivityView
+    let content: ([AppInfo]) -> TotalActivityView
     
-    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> String {
-        // Reformat the data into a configuration that can be used to create
-        // the report's view.
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.day, .hour, .minute, .second]
-        formatter.unitsStyle = .abbreviated
-        formatter.zeroFormattingBehavior = .dropAll
+    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> [AppInfo] {
+        var appInfo: [AppInfo] = []
         
-        let totalActivityDuration = await data.flatMap { $0.activitySegments }.reduce(0, {
-            $0 + $1.totalActivityDuration
-        })
-        return formatter.string(from: totalActivityDuration) ?? "No activity data"
+        #if targetEnvironment(simulator)
+        appInfo = [
+            AppInfo(bundleID: "com.apple.Music", displayName: "Music", duration: 1200),
+            AppInfo(bundleID: "com.apple.Safari", displayName: "Safari", duration: 3600),
+            AppInfo(bundleID: "com.apple.Maps", displayName: "Maps", duration: 2400)
+        ]
+        #else
+        for await day in data {
+            for await segment in day.activitySegments {
+                for await category in segment.categories {
+                    for await app in category.applications {
+                        let info = AppInfo(
+                            bundleID: app.application.bundleIdentifier ?? "No bundle ID",
+                            displayName: (app.application.localizedDisplayName ?? app.application.bundleIdentifier) ?? "No display name",
+                            duration: app.totalActivityDuration
+                        )
+                        appInfo.append(info)
+                    }
+                }
+            }
+        }
+        #endif
+        
+        return appInfo
     }
 }

@@ -10,66 +10,98 @@ import DeviceActivity
 import FamilyControls
 
 struct ContentView: View {
-    @EnvironmentObject var store: AppStore
-    
+    @State private var allApps: [AppInfo] = []
     @State private var selectedApps: Set<String> = []
+    @State private var searchText: String = ""
     
     private let selectedAppsKey = "selectedApps"
     
-    var body: some View {
-        List(store.appUsage.sorted(by: { $0.value > $1.value }), id: \.key) { bundleID, duration in
-            HStack {
-                Button(action: {
-                    toggleSelection(for: bundleID)
-                }) {
-                    Image(systemName: selectedApps.contains(bundleID) ? "checkmark.square" : "square")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                }
-                .buttonStyle(PlainButtonStyle())
-                
-                VStack(alignment: .leading) {
-                    Text(bundleID).font(.body)
-                    Text("\(Int(duration / 60)) min")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-                Spacer()
-            }
-            .padding(.vertical, 4)
+    var filteredApps: [AppInfo] {
+        if searchText.isEmpty {
+            return allApps
         }
-        .onAppear {
-            store.reload()
-            loadSelectedApps()
-        }
-        .navigationTitle("App Usage")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Print Selected") {
-                    print("Selected apps: \(selectedApps)")
-                }
-            }
+        return allApps.filter {
+            $0.displayName.localizedCaseInsensitiveContains(searchText)
         }
     }
     
-    private func toggleSelection(for bundleID: String) {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Select apps to monitor")
+                    .font(.headline)
+                Spacer()
+                Button("Refresh Apps") {
+                    loadApps()
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top)
+            
+            NavigationStack {
+                List(filteredApps.sorted(by: { $0.duration > $1.duration }), id: \.bundleID) { app in
+                    HStack {
+                        Button {
+                            toggleSelection(app.bundleID)
+                        } label: {
+                            Image(systemName: selectedApps.contains(app.bundleID)
+                                  ? "checkmark.square"
+                                  : "square")
+                        }
+                        .buttonStyle(.borderless)
+                        
+                        VStack(alignment: .leading) {
+                            Text(app.displayName)
+                                .font(.subheadline)
+                            Text("Usage: \(Int(app.duration/60)) min")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                    }
+                }
+                .searchable(text: $searchText, prompt: "Find apps")
+            }
+            
+            Button("Enable Tracking") {
+                Task {
+                    do {
+                        try await MonitoringManager.shared.requestAuthorization()
+                    } catch {
+                        print("Authorization failed: \(error)")
+                    }
+                }
+            }
+            .padding()
+        }
+        .onAppear {
+            loadApps()
+        }
+    }
+    
+    private func loadApps() {
+        #if targetEnvironment(simulator)
+        allApps = [
+            AppInfo(bundleID: "com.apple.Music", displayName: "Music", duration: 1200),
+            AppInfo(bundleID: "com.apple.Safari", displayName: "Safari", duration: 3600),
+            AppInfo(bundleID: "com.apple.Maps", displayName: "Maps", duration: 2400)
+        ]
+        selectedApps = Set(allApps.map { $0.bundleID })
+        #else
+        allApps = AppCatalog.loadApps()
+        selectedApps = AppCatalog.loadSelection()
+        #endif
+    }
+    
+    private func toggleSelection(_ bundleID: String) {
         if selectedApps.contains(bundleID) {
             selectedApps.remove(bundleID)
         } else {
             selectedApps.insert(bundleID)
         }
-        saveSelectedApps()
-    }
-    
-    private func loadSelectedApps() {
-        let defaults = UserDefaults(suiteName: AppGroup.id)
-        if let saved = defaults?.array(forKey: selectedAppsKey) as? [String] {
-            selectedApps = Set(saved)
-        }
-    }
-    
-    private func saveSelectedApps() {
-        let defaults = UserDefaults(suiteName: AppGroup.id)
-        defaults?.set(Array(selectedApps), forKey: selectedAppsKey)
+        #if !targetEnvironment(simulator)
+        AppCatalog.saveSelection(selectedApps)
+        #endif
     }
 }
 //

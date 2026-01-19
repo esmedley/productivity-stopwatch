@@ -1,0 +1,15 @@
+{
+  "originHash" : "521ba9a876da3519ef6f4f79ac6bee8fc010957583a097fa965c6bb4910abce6",
+  "pins" : [
+    {
+      "identity" : "swift-get-apps",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ghall89/swift-get-apps.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c9106ea511a369c57945602e0921937400815431"
+      }
+    }
+  ],
+  "version" : 3
+}

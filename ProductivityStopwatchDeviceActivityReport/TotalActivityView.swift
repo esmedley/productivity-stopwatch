@@ -8,26 +8,28 @@
 import SwiftUI
 import DeviceActivity
 
-struct TotalActivityView: View {
-    @State private var appUsage: [String: TimeInterval] = [:]
+struct TotalActivityView: View {  
+    let results: [AppInfo]
     
     var body: some View {
         VStack {
-            ForEach(appUsage.sorted(by: { $0.key < $1.key }), id: \.key) { bundleID, duration in
+            Text("App Usage Report")
+                .font(.headline)
+                .padding()
+            
+            List(results.sorted(by: { $0.duration > $1.duration }), id: \.bundleID) { app in
                 HStack {
-                    Text(bundleID)
-                    Spacer()
-                    Text("\(Int(duration)/60) min")
+                    VStack(alignment: .leading) {
+                        Text(app.displayName)
+                            .font(.subheadline)
+                        Text("Usage: \(Int(app.duration/60)) min")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
                 }
+                Spacer()
             }
         }
-        .onAppear(perform: loadFromAppGroup)
-        .padding()
-    }
-    
-    func loadFromAppGroup() {
-        let defaults = UserDefaults(suiteName: AppGroup.id)
-        appUsage = defaults?.dictionary(forKey: "usagePerApp") as? [String: TimeInterval] ?? [:]
     }
 }
 

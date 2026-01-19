@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57008DF82F1D6346008E3687 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		57008DFD2F1D6396008E3687 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57008DFC2F1D6396008E3687 /* AppInfo.swift */; };
+		57008DFE2F1D7897008E3687 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57008DFC2F1D6396008E3687 /* AppInfo.swift */; };
+		57008DFF2F1D7898008E3687 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57008DFC2F1D6396008E3687 /* AppInfo.swift */; };
+		57008E012F1D9F4F008E3687 /* AppCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57008E002F1D9F4F008E3687 /* AppCatalog.swift */; };
 		571C1A1C2F0F44EB002D7753 /* ProductivityStopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C1A1B2F0F44EB002D7753 /* ProductivityStopwatchApp.swift */; };
 		571C1A1E2F0F44EB002D7753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C1A1D2F0F44EB002D7753 /* ContentView.swift */; };
 		571C1A202F0F44ED002D7753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571C1A1F2F0F44ED002D7753 /* Assets.xcassets */; };
@@ -21,18 +26,22 @@
 		57D34EFB2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFA2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift */; };
 		57D34EFD2F1C42C800FE92D8 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFC2F1C42C800FE92D8 /* TotalActivityReport.swift */; };
 		57D34EFF2F1C42C800FE92D8 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34EFE2F1C42C800FE92D8 /* TotalActivityView.swift */; };
-		57D34F042F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 57D34EF82F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		57D34F0B2F1C446600FE92D8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED52F1C398300FE92D8 /* AppGroup.swift */; };
 		57D34F0C2F1C446800FE92D8 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED52F1C398300FE92D8 /* AppGroup.swift */; };
 		57D34F0F2F1C4F1000FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
-		57D34F102F1C4F1600FE92D8 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC71282F13475D00A9CE3B /* AppStore.swift */; };
-		57D34F122F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */; };
 		57D34F132F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
 		57D34F142F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */; };
 		57DC71272F13418A00A9CE3B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC71262F13418A00A9CE3B /* AuthorizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		57008DF92F1D6346008E3687 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571C1A102F0F44EB002D7753 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57D34EF72F1C42C800FE92D8;
+			remoteInfo = ProductivityStopwatchDeviceActivityReport;
+		};
 		571C1A292F0F44ED002D7753 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 571C1A102F0F44EB002D7753 /* Project object */;
@@ -54,23 +63,16 @@
 			remoteGlobalIDString = 57D34EDA2F1C3B0F00FE92D8;
 			remoteInfo = ProductivityStopwatchDeviceActivityMonitor;
 		};
-		57D34F022F1C42C800FE92D8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 571C1A102F0F44EB002D7753 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 57D34EF72F1C42C800FE92D8;
-			remoteInfo = ProductivityStopwatchDeviceActivityReport;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		57D34F082F1C42C800FE92D8 /* Embed ExtensionKit Extensions */ = {
+		57008DFB2F1D6346008E3687 /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				57D34F042F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */,
+				57008DF82F1D6346008E3687 /* ProductivityStopwatchDeviceActivityReport.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +91,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		57008DFC2F1D6396008E3687 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		57008E002F1D9F4F008E3687 /* AppCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCatalog.swift; sourceTree = "<group>"; };
 		571C1A182F0F44EB002D7753 /* ProductivityStopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductivityStopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571C1A1B2F0F44EB002D7753 /* ProductivityStopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchApp.swift; sourceTree = "<group>"; };
 		571C1A1D2F0F44EB002D7753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,11 +115,9 @@
 		57D34EFE2F1C42C800FE92D8 /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
 		57D34F002F1C42C800FE92D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57D34F012F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductivityStopwatchDeviceActivityReport.entitlements; sourceTree = "<group>"; };
-		57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStopwatchDeviceActivityMonitor.swift; sourceTree = "<group>"; };
 		57DC710B2F133D5B00A9CE3B /* ProductivityStopwatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductivityStopwatch.entitlements; sourceTree = "<group>"; };
 		57DC71122F133E3E00A9CE3B /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		57DC71262F13418A00A9CE3B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
-		57DC71282F13475D00A9CE3B /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,9 +194,10 @@
 				571C1A1F2F0F44ED002D7753 /* Assets.xcassets */,
 				571C1A212F0F44ED002D7753 /* Preview Content */,
 				57DC71262F13418A00A9CE3B /* AuthorizationView.swift */,
-				57DC71282F13475D00A9CE3B /* AppStore.swift */,
 				57D34ED32F1C361D00FE92D8 /* MonitoringManager.swift */,
 				57D34ED52F1C398300FE92D8 /* AppGroup.swift */,
+				57008DFC2F1D6396008E3687 /* AppInfo.swift */,
+				57008E002F1D9F4F008E3687 /* AppCatalog.swift */,
 			);
 			path = ProductivityStopwatch;
 			sourceTree = "<group>";
@@ -230,7 +233,6 @@
 				57D34EDE2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift */,
 				57D34EE02F1C3B0F00FE92D8 /* Info.plist */,
 				57D34EE12F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.entitlements */,
-				57D34F112F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift */,
 			);
 			path = ProductivityStopwatchDeviceActivityMonitor;
 			sourceTree = "<group>";
@@ -266,15 +268,17 @@
 				571C1A152F0F44EB002D7753 /* Frameworks */,
 				571C1A162F0F44EB002D7753 /* Resources */,
 				57DC711F2F133E3E00A9CE3B /* Embed Foundation Extensions */,
-				57D34F082F1C42C800FE92D8 /* Embed ExtensionKit Extensions */,
+				57008DFB2F1D6346008E3687 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				57D34EE32F1C3B0F00FE92D8 /* PBXTargetDependency */,
-				57D34F032F1C42C800FE92D8 /* PBXTargetDependency */,
+				57008DFA2F1D6346008E3687 /* PBXTargetDependency */,
 			);
 			name = ProductivityStopwatch;
+			packageProductDependencies = (
+			);
 			productName = ProductivityStopwatch;
 			productReference = 571C1A182F0F44EB002D7753 /* ProductivityStopwatch.app */;
 			productType = "com.apple.product-type.application";
@@ -387,6 +391,9 @@
 				Base,
 			);
 			mainGroup = 571C1A0F2F0F44EB002D7753;
+			packageReferences = (
+				57008DF52F1D5F25008E3687 /* XCRemoteSwiftPackageReference "swift-get-apps" */,
+			);
 			productRefGroup = 571C1A192F0F44EB002D7753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,12 +452,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57008E012F1D9F4F008E3687 /* AppCatalog.swift in Sources */,
 				571C1A1E2F0F44EB002D7753 /* ContentView.swift in Sources */,
 				57D34F0F2F1C4F1000FE92D8 /* MonitoringManager.swift in Sources */,
 				57D34ED62F1C398300FE92D8 /* AppGroup.swift in Sources */,
-				57D34F102F1C4F1600FE92D8 /* AppStore.swift in Sources */,
 				571C1A1C2F0F44EB002D7753 /* ProductivityStopwatchApp.swift in Sources */,
 				57DC71272F13418A00A9CE3B /* AuthorizationView.swift in Sources */,
+				57008DFD2F1D6396008E3687 /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +484,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D34EDF2F1C3B0F00FE92D8 /* DeviceActivityMonitorExtension.swift in Sources */,
+				57008DFE2F1D7897008E3687 /* AppInfo.swift in Sources */,
 				57D34F0B2F1C446600FE92D8 /* AppGroup.swift in Sources */,
-				57D34F122F1C510100FE92D8 /* ProductivityStopwatchDeviceActivityMonitor.swift in Sources */,
 				57D34F132F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,12 +499,18 @@
 				57D34F142F1C51EE00FE92D8 /* MonitoringManager.swift in Sources */,
 				57D34EFB2F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport.swift in Sources */,
 				57D34EFD2F1C42C800FE92D8 /* TotalActivityReport.swift in Sources */,
+				57008DFF2F1D7898008E3687 /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		57008DFA2F1D6346008E3687 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57D34EF72F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */;
+			targetProxy = 57008DF92F1D6346008E3687 /* PBXContainerItemProxy */;
+		};
 		571C1A2A2F0F44ED002D7753 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 571C1A172F0F44EB002D7753 /* ProductivityStopwatch */;
@@ -511,11 +525,6 @@
 			isa = PBXTargetDependency;
 			target = 57D34EDA2F1C3B0F00FE92D8 /* ProductivityStopwatchDeviceActivityMonitor */;
 			targetProxy = 57D34EE22F1C3B0F00FE92D8 /* PBXContainerItemProxy */;
-		};
-		57D34F032F1C42C800FE92D8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 57D34EF72F1C42C800FE92D8 /* ProductivityStopwatchDeviceActivityReport */;
-			targetProxy = 57D34F022F1C42C800FE92D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -931,6 +940,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57008DF52F1D5F25008E3687 /* XCRemoteSwiftPackageReference "swift-get-apps" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ghall89/swift-get-apps.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 571C1A102F0F44EB002D7753 /* Project object */;
 }
